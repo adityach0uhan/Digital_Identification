@@ -24,16 +24,16 @@
 <!-- table  -->
 <h2>User data view page</h2>
 <% 
-x.forEach((y)=>{ %>
 <table class="table table-bordered">
     <thead>
-      <tr>
-        <th scope="col">Details </th>
-        <th scope="col">User Infromation</th>
-      </tr>
+        <tr>
+            <th scope="col">Details </th>
+            <th scope="col">User Infromation</th>
+        </tr>
     </thead>
     <tbody>
-      <tr>
+        <tr>
+          x.forEach((y)=>{ %>
         <th scope="row">Full Name : </th>
         <td><%= y.Username%></td>
       </tr>
