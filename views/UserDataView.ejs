@@ -1,75 +1,86 @@
 <head>
 
-    <%- include("common/cdn.ejs") %>
+  <%- include("common/cdn.ejs") %>
 
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <style>
-        .user-data-page{
-            display: block;
-            margin: 20px;
-            /* background-color: red; */
-        }
-        </style>
-    
-    <%- include("common/navigationBar.ejs") %>
+  <style>
+    .user-table-div{
+      text-align: center;
+      font-family: 'Castoro Titling', cursive;
 
+    }
+    .user-table-div h2{
+      padding: 10px;
+    }
+    @media only screen and (min-width: 1200px) {
+      .user-table-div {
+        width: 70vw;
+        height: fit-content;
+        margin: auto;
+        /* background-color: yellow; */
+      }
+    }
+  </style>
 
-
-
-
-
-<!-- table  -->
-<h2>User data view page</h2>
-
-<table class="table table-bordered">
-    <thead>
-        <tr>
+  <%- include("common/navigationBar.ejs") %>
+    <!-- table  -->
+    <div class="user-table-div">
+      <h2>User data view page</h2>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
             <th scope="col">Details </th>
             <th scope="col">User Infromation</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <%  x.forEach((y)=>{ %>
-        <th scope="row">Full Name : </th>
-        <td><%= y.Username%></td>
-      </tr>
-      <tr>
-        <th scope="row">Branch :</th>
-        <td> <%= y.branch%></td>
-      </tr>
-      <tr>
-        <th scope="row">Roll Number :</th>
-        <td>  <%= y.rollNum %></td>
-      </tr>
-      <tr>
-        <th scope="row">Enrollment Number :</th>
-        <td>  <%= y.enrollmentNum %></td>
-      </tr>
-      <tr>
-        <th scope="row">Gender :</th>
-        <td>  <%= y.gender %></td>
-      </tr>
-      <tr>
-        <th scope="row">Address :</th>
-        <td>  <%= y.Address%></td>
-      </tr>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Full Name : </th>
+            <td>
+              <% x.forEach((y)=>{ %>
+                <%= y.Username%>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Branch :</th>
+            <td>
+              <%= y.branch%>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Roll Number :</th>
+            <td>
+              <%= y.rollNum %>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Enrollment Number :</th>
+            <td>
+              <%= y.enrollmentNum %>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Gender :</th>
+            <td>
+              <%= y.gender %>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Address :</th>
+            <td>
+              <%= y.Address%>
+                <% })%>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-      
-    </tbody>
-  </table>
-            <!-- table  -->
 
 
-    
-       
-        
-        <% })%>
-    
 
-    
     <%- include("common/footer.ejs") %>
 </body>
