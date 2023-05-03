@@ -1,0 +1,33 @@
+<head>
+
+    <%- include("common/cdn.ejs") %>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h2>User data view page</h2>
+    <style>
+        .user-data-page{
+            display: block;
+            margin: 20px;
+            background-color: red;
+        }
+    </style>
+    
+    <%- include("common/navigationBar.ejs") %>
+    <div class="user-data-page">
+    <% 
+    x.forEach((y)=>{ %>
+        <h3>Full Name :        <p><%= y.Username%></h3></p>
+        <h3>Enrollment Number :<p><%= y.enrollmentNum%></h3></p>
+        <h3>Branch :           <p><%= y.branch%></h3></p>
+        <h3>Roll Number :      <p><%= y.rollNum%></h3></p>
+        <h3>Gender :           <p><%= y.gender%></h3></p>
+        <h3>Address :          <p><%= y.Address%></h3></p>
+        <% })%>
+    </div>
+
+    
+    <%- include("common/footer.ejs") %>
+</body>

@@ -1,0 +1,181 @@
+<%- include("common/cdn.ejs") %>
+
+    <body>
+        <style>
+            /* desktop style  */
+            .img-main {
+                background-repeat: no-repeat;
+                opacity: 0.5;
+            }
+
+            .text-div h4 {
+                padding: 5px;
+                position: relative;
+                top: 20px;
+                text-align: start;
+                /* font-weight: bolder; */
+                font-size: 1.4rem;
+                font-family: 'Castoro Titling', cursive;
+            }
+
+            .text-div p {
+                position: relative;
+                font-family: 'Castoro Titling', cursive;
+                padding: 5px;
+                top: 50px;
+                text-decoration: none;
+            }
+
+            .text-div h3 {
+                padding: 5px;
+                position: relative;
+                top: 50px;
+                text-align: start;
+                font-weight: bolder;
+                font-size: 2.2rem;
+                font-family: 'Castoro Titling', cursive;
+            }
+
+            a {
+                color: black;
+                text-decoration: underline;
+            }
+
+            .text-div {
+                font-family: 'Castoro Titling', cursive;
+                /* font-family: 'Lato', sans-serif; */
+                font-weight: 900;
+                /* text-align: center; */
+                position: absolute;
+                top: 40;
+                left: 50%;
+                height: 50vh;
+                width: 30vw;
+                border: 5px solid rgb(255, 255, 255);
+                background-color: rgb(223, 223, 223);
+            }
+
+            .image-div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: auto;
+                height: 90vh;
+                overflow: hidden;
+                /* background-color: rgb(255, 255, 192); */
+            }
+
+            .home-main-div {
+                height: 100%;
+                width: 100%;
+            }
+
+            .second-backg-contai {
+                background-color: rgb(203, 219, 197, 1);
+            }
+
+            .image-container {
+                width: 50vw;
+                position: absolute;
+                left: 12%;
+                height: 70vh;
+                border: 5px solid rgb(255, 255, 255);
+            }
+
+            .mobile {
+                display: none;
+            }
+
+            @media only screen and (max-width: 600px) {
+                .image-div {
+                    display: none;
+                }
+                body{
+                    height: fit-content;
+                    position: fixed;
+                }
+                *{
+            
+                    padding:0;
+                    margin: 0;
+                }
+
+                .mobile {
+
+                    height: 50vh;
+                    width: 100vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    /* background-color: red; */
+                }
+
+                .mobile-image-container {
+
+                    width: 100vw;
+                    height: 50%;
+                }
+
+                .mobile-text-div {
+                    width: 100vw;
+                    /* border: px solid black; */
+                    height: 50%;
+                }
+
+                .mobile-text-div h3 {
+                    font-family: 'Castoro Titling', cursive;
+                    font-size: 1rem;
+                    padding-left: 20px;
+                }
+
+                .mobile-text-div h4 {
+                    font-family: 'Castoro Titling', cursive;
+                    padding-left: 20px;
+                }
+
+                .mobile-text-div p {
+                    font-family: 'Castoro Titling', cursive;
+                    padding-left: 20px;
+
+
+                }
+            }
+        </style>
+
+        <%- include("common/navigationBar.ejs") %>
+
+
+
+            <div class="image-div">
+                <div class="home-main-div first-backg-contai "></div>
+                <div class="home-main-div second-backg-contai"></div>
+                <div class="image-container">
+                    <img height="100%" width="100%" src="/image/qr.jpg" alt=" image">
+                </div>
+                <div class="text-div">
+                    <h4>A UNIQUE IDENTITY FOR ALL </h4>
+                    <h3>Digital Identification</h3>
+                    <p><a href="">Register here <i class="fa-solid fa-link fa-shake"></i></a></p>
+
+                </div>
+            </div>
+
+
+            <div class="mobile">
+                <div class="mobile-image-container">
+                    <img height="100%" width="100%" src="/image/qr.jpg" alt=" image">
+                </div>
+                <div class="mobile-text-div">
+                    <h4>A UNIQUE IDENTITY FOR ALL </h4>
+                        <h3>Digital Identification</h3>
+                    <p><a href="user/register">Register here <i class="fa-solid fa-link fa-shake"></i></a></p>
+
+                </div>
+            </div>
+
+
+            <%- include("common/footer.ejs") %>
+    </body>
+
+    </html>

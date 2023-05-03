@@ -1,0 +1,58 @@
+<%- include("common/cdn.ejs") %>
+
+<body>
+    
+    <%- include("common/navigationBar.ejs") %>
+
+
+
+    <!-- Section: Design Block -->
+<section class="text-center">
+    <!-- Background image -->
+    <div class="p-2 bg-image" style="
+          background-color: rgb(100, 148, 237);
+          height: 180px;
+          "></div>
+    <!-- Background image -->
+  
+    <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+          margin-top: -100px;
+          background: hsla(0, 0%, 100%, 0.8);
+          backdrop-filter: blur(30px);
+          ">
+      <div class="card-body py-5 px-md-5">
+  
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8">
+            <h2 class="fw-bold mb-3">Admin Login</h2>
+
+            <form method="post" action="/admin">
+              <!-- Email input -->
+              <div class="form-outline mb-2">
+                <input type="text" id="form3Example3" class="form-control" name="adminId" />
+                <label class="form-label" for="form3Example3">Admin ID</label>
+              </div>
+  
+              <!-- Password input -->
+              <div class="form-outline mb-2">
+                <input type="password" id="form3Example4" class="form-control" name="adminPassword" />
+                <label class="form-label" for="form3Example4">Admin Password</label>
+              </div>
+  
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-danger btn-block mb-4">
+                Login as Admin
+              </button>
+  
+             
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section: Design Block -->
+
+    <%- include("common/footer.ejs" ) %>
+</body>

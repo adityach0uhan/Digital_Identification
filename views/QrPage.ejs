@@ -1,0 +1,88 @@
+<%- include("common/cdn.ejs") %>
+
+
+
+    <style>
+        .qrdiv {
+            /* background-color: yellow; */
+            margin: 30px auto;
+            width: 80vw;
+
+            /* margin-bottom: 320px; */
+        }
+    </style>
+    <%- include("common/navigationBar.ejs") %>
+
+
+        <div class=" qrdiv ">
+
+
+<!-- table  -->
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Details </th>
+        <th scope="col">User Infromation</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Full Name : </th>
+        <td><%= Username%></td>
+      </tr>
+      <tr>
+        <th scope="row">Branch :</th>
+        <td> <%= branch%></td>
+      </tr>
+      <tr>
+        <th scope="row">Roll Number :</th>
+        <td>  <%=rollNum %></td>
+      </tr>
+      <tr>
+        <th scope="row">Enrollment Number :</th>
+        <td>  <%=enrollmentNum %></td>
+      </tr>
+      <tr>
+        <th scope="row">Gender :</th>
+        <td>  <%=gender %></td>
+      </tr>
+      <tr>
+        <th scope="row">Address :</th>
+        <td>  <%= Address%></td>
+      </tr>
+
+      <tr>
+        <th scope="row">Qr :</th>
+        <td>  <div id="qrcode" class=""></div>
+            <div></td>
+      </tr>
+      
+    </tbody>
+  </table>
+            <!-- table  -->
+
+<!-- 
+            <h5 class="p-2 m-1">Full Name : <%= Username%>
+            </h5>
+            <h5 class="p-2 m-1">Branch : <%= branch%>
+            </h5>
+            <h5 class="p-2 m-1">Roll Number : <%=rollNum %>
+            </h5>
+            <h5 class="p-2 m-1">Enrollment Number :<%= enrollmentNum%>
+            </h5>
+            <h5 class="p-2 m-1">Gender :<%=gender %>
+            </h5>
+            <h5 class="p-2 m-1">Address :<%= Address%>
+            </h5> -->
+            
+            <!-- <div id="qrcode" class="" download>download</div>
+            <div> -->
+
+            
+                
+
+            <script type="text/javascript">
+                new QRCode(document.getElementById("qrcode"), "http://localhost:5000/user/info/<%= enrollmentNum %> ");
+            </script>
+            <%- include("common/footer.ejs") %>

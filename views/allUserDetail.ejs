@@ -1,0 +1,87 @@
+<%- include("common/cdn.ejs") %>
+
+<body>
+    <style>
+     th, td{
+      text-align: center;
+        width: 30%;
+        height: fit-content;
+
+      }
+     td button{
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        border: none;
+        /* background-color: darkgrey; */
+      }
+      
+      td button:hover{
+        background-color: black;
+        color: white;
+      }
+      .table-div{
+        margin: 20px auto;
+        
+        width: 90%;
+      }
+      .width10{
+        width: 5%;
+      }
+    </style>
+    
+    <%- include("common/navigationBar.ejs") %>
+
+   
+    <div class="table-div ">
+
+      
+      <table class="table table-striped table-dark table-bordered">
+            <thead>
+                <tr>
+                  <th scope="col" class="width10" ><i class="fa-solid fa-clipboard-list"></i></th>
+                  <th scope="col">Full Name</th>
+                  <th scope="col">Enrollment Number</th>
+                  <th scope="col">Roll Number</th>
+                  <th scope="col" class="width10">Action</th>
+                </tr>
+              </thead>
+            </div>
+            
+              <% 
+    x.forEach((y,i=1)=>{ %>
+      <div class="table-div">
+      <table class="table table-striped table-light table-bordered">
+        <tbody>
+          <tr>
+                <% i++%>
+                <th scope="row" class="width10"><%= i%></th>
+                <td><%= y.Username%> </td>
+                <td><%= y.enrollmentNum%></td>
+                <td><%= y.rollNum%></td>
+                <td><a href= " /user/deleteUser/<%=y.enrollmentNum %>" class="deleteBtn" data-id=<%= y.enrollmentNum%> ><i class="fa-sharp fa-solid fa-trash fa-bounce"></i></a></td>
+                
+
+                
+              </tr>
+            </tbody>
+          </table>
+          
+        </div>
+          
+          <% })%>
+          
+          
+<script>
+
+$(document).ready(function(){
+  $(".deleteBtn").click(()=>{
+    alert(" Are you sure You want to delete this user")
+  })
+})
+
+</script>
+
+    <%- include("common/footer.ejs" ) %>
+</body>
