@@ -15,18 +15,60 @@
         </style>
     
     <%- include("common/navigationBar.ejs") %>
-    <h2>User data view page</h2>
-    <div class="user-data-page">
-        <% 
-        x.forEach((y)=>{ %>
-        <h3>Full Name :        <p><%= y.Username%></h3></p>
-        <h3>Enrollment Number :<p><%= y.enrollmentNum%></h3></p>
-        <h3>Branch :           <p><%= y.branch%></h3></p>
-        <h3>Roll Number :      <p><%= y.rollNum%></h3></p>
-        <h3>Gender :           <p><%= y.gender%></h3></p>
-        <h3>Address :          <p><%= y.Address%></h3></p>
+
+
+
+
+
+
+<!-- table  -->
+<h2>User data view page</h2>
+<% 
+x.forEach((y)=>{ %>
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Details </th>
+        <th scope="col">User Infromation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Full Name : </th>
+        <td><%= y.Username%></td>
+      </tr>
+      <tr>
+        <th scope="row">Branch :</th>
+        <td> <%= y.branch%></td>
+      </tr>
+      <tr>
+        <th scope="row">Roll Number :</th>
+        <td>  <%= y.rollNum %></td>
+      </tr>
+      <tr>
+        <th scope="row">Enrollment Number :</th>
+        <td>  <%= y.enrollmentNum %></td>
+      </tr>
+      <tr>
+        <th scope="row">Gender :</th>
+        <td>  <%= y.gender %></td>
+      </tr>
+      <tr>
+        <th scope="row">Address :</th>
+        <td>  <%= y.Address%></td>
+      </tr>
+
+      
+    </tbody>
+  </table>
+            <!-- table  -->
+
+
+    
+       
+        
         <% })%>
-    </div>
+    
 
     
     <%- include("common/footer.ejs") %>
