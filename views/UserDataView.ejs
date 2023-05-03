@@ -6,19 +6,19 @@
 </head>
 
 <body>
-    <h2>User data view page</h2>
     <style>
         .user-data-page{
             display: block;
             margin: 20px;
-            background-color: red;
+            /* background-color: red; */
         }
-    </style>
+        </style>
     
     <%- include("common/navigationBar.ejs") %>
+    <h2>User data view page</h2>
     <div class="user-data-page">
-    <% 
-    x.forEach((y)=>{ %>
+        <% 
+        x.forEach((y)=>{ %>
         <h3>Full Name :        <p><%= y.Username%></h3></p>
         <h3>Enrollment Number :<p><%= y.enrollmentNum%></h3></p>
         <h3>Branch :           <p><%= y.branch%></h3></p>
