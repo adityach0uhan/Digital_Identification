@@ -99,7 +99,7 @@ const userRegister = async (req, res) => {
       sendM(email, Username);
     })
     .catch((e) => {
-      console.log(e);
+      res.render("alreadyExists.ejs",{email,rollNum})
     });
 };
 

@@ -3,7 +3,6 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const path = require("path");
-
 const { Userrouter, UserData } = require("./user.route.js");
 const adminData = require("../models/admin.model.js");
 app.set("view engine", "ejs");
