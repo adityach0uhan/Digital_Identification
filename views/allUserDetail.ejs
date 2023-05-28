@@ -49,6 +49,7 @@
               </thead>
             </div>
             
+            
               <% 
     x.forEach((y,i=1)=>{ %>
       <div class="table-div">
@@ -62,12 +63,9 @@
                 <td><%= y.rollNum%></td>
                 <td><a href= " /user/deleteUser/<%=y.enrollmentNum %>" class="deleteBtn" data-id=<%= y.enrollmentNum%> ><i class="fa-sharp fa-solid fa-trash fa-bounce"></i></a></td>
                 
-
-                
               </tr>
             </tbody>
           </table>
-          
         </div>
           
           <% })%>

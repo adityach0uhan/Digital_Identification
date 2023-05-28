@@ -1,5 +1,8 @@
+require("dotenv").config();
+// const { config } = require("dotenv");
 const UserData = require("../models/user.model");
 const nodemailer = require("nodemailer");
+
 
 // Send Mail Function
 async function sendM(UserEmailId, Username) {
@@ -10,8 +13,8 @@ async function sendM(UserEmailId, Username) {
       secure: false,
       requireTLS: true,
       auth: {
-        user: "motivational-quotes1@outlook.com",
-        pass: "Aditya@123",
+        user: process.env.SMTP_User,
+        pass: process.env.SMTP_Pass,
       },
     });
 
@@ -22,14 +25,12 @@ async function sendM(UserEmailId, Username) {
       html: `
           Dear ${Username} ,
           <br><br>
-          successfully registered to our Digital Student Identification website 
+          Successfully Registered to our Digital Student Identification Website 
           <br>
-          we have provided you a QR code which you can use to Identify yourself 
+          We have provided you a QR-code which you can use as an Identity 
           <br>
           <br>
-          
           <br>From Digital Identification website by Aditya  <br>
-          
           `,
     };
     transporter.sendMail(mailOptions, function (error) {

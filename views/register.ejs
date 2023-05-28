@@ -1,101 +1,103 @@
 <%- include("common/cdn.ejs") %>
 
-  <body >
+  <body>
     <style>
-      .form-container{
+      .form-container {
         margin: 50px auto;
         width: 80vw;
       }
-      body{
-        
-        background: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fstudent-background&psig=AOvVaw1FLZgvW2wnMcEQ-djcWLiC&ust=1683164956241000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCLjqwKCE2P4CFQAAAAAdAAAAABAE");
+      body {
+
+       
         background-size: auto;
         background-repeat: no-repeat;
       }
     </style>
-    
+
     <%- include("common/navigationBar.ejs")%>
 
-    <div class="form-container">
-    <form class="row g-3 needs-validation" method="post" action="/user/register" novalidate>
-      <div class="col-md-4">
-        <label for="validationCustom01" class="form-label">Full Name</label>
-        <input type="text" class="form-control" name="Username" id="validationCustom01"  required>
-        <div class="valid-feedback">
-          Looks good!
-        </div>
-      </div>
-      <div class="col-md-4">
-        <label for="validationCustom02" class="form-label">Enrollment Number</label>
-        <input type="text" name="enrollmentNum" class="form-control" id="validationCustom02"  required>
-        <div class="valid-feedback">
-          Looks good!
-        </div>
-      </div>
-      <div class="col-md-4">
-        <label for="validationCustomUsername" class="form-label">Email</label>
-        <div class="input-group has-validation">
-          <span class="input-group-text" id="inputGroupPrepend">@</span>
-          <input type="text" name="email" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-          <div class="invalid-feedback">
-            Please choose a email.
+      <div class="form-container">
+        <form class="row g-3 needs-validation" method="post" action="/user/register" novalidate>
+          <div class="col-md-4">
+            <label for="validationCustom01" class="form-label">Full Name</label>
+            <input type="text" class="form-control" name="Username" id="validationCustom01" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
           </div>
-        </div><Address></Address>
-      </div>
-      <div class="col-md-6">
-        <label for="validationCustom03" class="form-label">Branch</label>
-        <input type="text" name="branch" class="form-control" id="validationCustom03" required>
-        <div class="invalid-feedback">
-          Please provide a valid branch.
-        </div>
-      </div>
-      <div class="col-md-3">
-        <label for="validationCustom04" class="form-label">Gender</label>
-        <select class="form-select" name="gender" id="validationCustom04" required>
-          <option selected  value="male">Male</option>
-          <option   value="female">Female</option>
-
-          <!-- <option>...</option> -->
-        </select>
-        <div class="invalid-feedback">
-          Please select a valid state.
-        </div>
-      </div>
-      <div class="col-md-3">
-        <label for="validationCustom05" class="form-label">Roll Number</label>
-        <input type="text" class="form-control" name="rollNum" id="validationCustom05" required>
-        <div class="invalid-feedback">
-          Please provide a valid Roll Number.
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <label for="validationCustom05" class="form-label">Address</label>
-        <input type="text" class="form-control" name="Address" id="validationCustom05" required>
-        <div class="invalid-feedback">
-          Please provide a valid address .
-        </div>
-      </div>
-
-
-      <div class="col-12">
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-          <label class="form-check-label" for="invalidCheck">
-            Above Information provided is correct 
-          </label>
-          <div class="invalid-feedback">
-            You must agree before submitting.
+          <div class="col-md-4">
+            <label for="validationCustom02" class="form-label">Enrollment Number</label>
+            <input type="text" name="enrollmentNum" class="form-control" id="validationCustom02" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
           </div>
-        </div>
+          <div class="col-md-4">
+            <label for="validationCustomUsername" class="form-label">Email</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend">@</span>
+              <input type="text" name="email" class="form-control" id="validationCustomUsername"
+                aria-describedby="inputGroupPrepend" required>
+              <div class="invalid-feedback">
+                Please choose a email.
+              </div>
+            </div>
+            <Address></Address>
+          </div>
+          <div class="col-md-6">
+            <label for="validationCustom03" class="form-label">Branch</label>
+            <input type="text" name="branch" class="form-control" id="validationCustom03" required>
+            <div class="invalid-feedback">
+              Please provide a valid branch.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">Gender</label>
+            <select class="form-select" name="gender" id="validationCustom04" required>
+              <option selected value="male">Male</option>
+              <option value="female">Female</option>
+
+              <!-- <option>...</option> -->
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid state.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom05" class="form-label">Roll Number</label>
+            <input type="text" class="form-control" name="rollNum" id="validationCustom05" required>
+            <div class="invalid-feedback">
+              Please provide a valid Roll Number.
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <label for="validationCustom05" class="form-label">Address</label>
+            <input type="text" class="form-control" name="Address" id="validationCustom05" required>
+            <div class="invalid-feedback">
+              Please provide a valid address .
+            </div>
+          </div>
+
+
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+              <label class="form-check-label" for="invalidCheck">
+                Above Information provided is correct
+              </label>
+              <div class="invalid-feedback">
+                You must agree before submitting.
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">Submit form</button>
+          </div>
+        </form>
+
+
       </div>
-      <div class="col-12">
-        <button class="btn btn-primary" type="submit">Submit form</button>
-      </div>
-    </form>
-
-
-  </div>
 
 
 
@@ -125,7 +127,7 @@
 
 
 
-        <!-- <form action="/user/register" method="post" class="form-horizontal ">
+      <!-- <form action="/user/register" method="post" class="form-horizontal ">
 
           <div class=" d-flex flex-row flex-wrap justify-content-lg-around align-items-center p-1 flex-md-column ">
 
@@ -165,11 +167,10 @@
             </div>
             <input type="submit">
             <button type="submit" class="btn-lg d-block">Submit</button> -->
-          <!-- </div>
+      <!-- </div>
         </form>
       </div> -->
 
 
       <%- include("common/footer.ejs")%>
   </body>
-

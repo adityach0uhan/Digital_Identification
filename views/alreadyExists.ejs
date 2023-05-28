@@ -1,13 +1,35 @@
-
+<style>
+    .already-exist-container{
+        border: 3px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 70vh;
+        flex-direction: column;
+        /* background-color: azure; */
+        text-align: start;
+    }
+    .exist-gif{
+        width: 100%;
+    }
+</style>
 <%- include("common/cdn.ejs") %>
 <body>
     
     <%- include("common/navigationBar.ejs") %>
 
-<h4 >A user with this <%= email %> or <%= rollNum%> already exist </h4>
-<a href="/user/register">
-<button class="btn btn-primary"> Back</button>
-</a>
+    <div class="already-exist-container container">
+<div class="exist-gif">
+    <img src="/public/image/search.gif" alt="">
+</div>
+
+        <p >A user with this <br>Email Id : "  <%= email %>  "or <br> Roll Number : " <%= rollNum%>  "  <br> lready exists in the Database </p>
+        <br><br>
+        <a href="/user/register">
+            <button class="btn btn-primary"> Back</button>
+        </a>
+    </div>
 
     <%- include("common/footer.ejs") %>
 </body>

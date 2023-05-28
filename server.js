@@ -1,11 +1,10 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const path = require("path");
 const mongoose = require("mongoose");
-require("dotenv").config();
 const dbConnect = require("./database/db");
 dbConnect();
-
 app.set("view engine", "ejs");
 const viewsFolder = path.join(path.resolve(), "views");
 
@@ -25,9 +24,15 @@ app.use("/user", Userrouter);
 
 // admin route
 const adminRouter = require("./routes/admin.route");
+// const { config } = require("dotenv");
 app.use("/admin", adminRouter);
 
+
+app.get("/ContactMe",(req,res)=>{
+  res.render(__dirname+ "/views/contactMe.ejs")
+});
+
 // server port
-app.listen(3000, () => {
-  console.log("server is running on port 3000");
+app.listen(process.env.PORT, () => {
+  console.log(`server is running on port ${process.env.PORT}` );
 });
