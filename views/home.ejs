@@ -41,7 +41,7 @@
                 text-decoration: underline;
                 padding: 10px;
                 cursor: pointer;
-                
+
             }
 
             .text-div {
@@ -94,12 +94,18 @@
                 .image-div {
                     display: none;
                 }
-                body{
-                    height: fit-content;
-                    position: fixed;
+
+                footer .info-para {
+                    text-align: start;
                 }
-                *{
-                    padding:0;
+
+                body {
+                    height: fit-content;
+                    overflow-x: hidden;
+                }
+
+                * {
+                    padding: 0;
                     margin: 0;
                 }
 
@@ -110,8 +116,7 @@
                     align-items: center;
                     justify-content: center;
                     flex-direction: column;
-                    /* gap: 10px; */
-                    /* background-color: red; */
+                    font-family: 'Lato', sans-serif;
                 }
 
                 .mobile-image-container {
@@ -121,21 +126,27 @@
 
                 .mobile-text-div {
                     width: 100vw;
-                    background-color: rgb(236, 225, 211);
-                    padding: 10px 0px;
+                    background-color: rgb(255, 255, 255);
+                    padding: 17px 0px;
+                    border:3px solid black ;
+
+                    
                     /* border: px solid black; */
                     height: 50%;
                 }
 
                 .mobile-text-div h5 {
                     /* font-family: 'Castoro Titling', cursive; */
-                    font-size: 1rem;
+                    font-size: 1.5rem;
                     padding-left: 20px;
+                    font-weight: bolder;
                 }
 
                 .mobile-text-div h4 {
                     /* font-family: 'Castoro Titling', cursive; */
                     padding-left: 20px;
+                    font-weight: bolder;
+
                 }
 
                 .mobile-text-div p {
@@ -170,14 +181,14 @@
                 </div>
                 <div class="mobile-text-div text-align-center ">
                     <h5 class="fs-6 text-lg-start font-heading">A UNIQUE IDENTITY FOR ALL STUDENTS </h5>
-                        <h4 class="pt-2">Digital Student Identification</h4>
+                    <h4 class="pt-2">Digital Student Identification</h4>
                     <p><a href="/user/register">Register here <i class="fa-solid fa-link fa-shake"></i></a></p>
 
                 </div>
             </div>
 
 
-        </body>
-        <%- include("common/footer.ejs") %>    
+    </body>
+    <%- include("common/footer.ejs") %>
 
-    </html>
+        </html>
