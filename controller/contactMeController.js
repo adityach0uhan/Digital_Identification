@@ -49,6 +49,7 @@ async function sendComplaint() {
         if (error) {
           console.log(error);
         } else {
+          res.render("../views/ContactMeSuccess.ejs",{name});
           console.log(`Email Has been Sent`);
         }
       });
