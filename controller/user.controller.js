@@ -1,4 +1,5 @@
 require("dotenv").config();
+// const { config } = require("dotenv");
 const UserData = require("../models/user.model");
 const nodemailer = require("nodemailer");
 
