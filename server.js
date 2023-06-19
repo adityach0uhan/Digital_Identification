@@ -24,15 +24,14 @@ app.use("/user", Userrouter);
 
 // admin route
 const adminRouter = require("./routes/admin.route");
-// const { config } = require("dotenv");
 app.use("/admin", adminRouter);
 
 
-app.get("/ContactMe",(req,res)=>{
-  res.render(__dirname+ "/views/contactMe.ejs")
-});
+// contact me route 
+const contactPageRouter = require("./routes/contactMe.route");
+app.use('/ContactMe', contactPageRouter);
 
 // server port
 app.listen(process.env.PORT, () => {
-  console.log(`server is running on port ${process.env.PORT}` );
+  console.log(`server is running on port ${process.env.PORT}`);
 });

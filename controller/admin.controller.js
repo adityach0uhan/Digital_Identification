@@ -1,5 +1,8 @@
 require("dotenv").config();
 const adminData = require("../models/admin.model.js");
+
+
+
 // Load Admin Page
 const loginPage = async (req, res) => {
   res.render("../views/adminLogin.ejs");
