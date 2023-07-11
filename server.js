@@ -8,6 +8,7 @@ dbConnect();
 app.set("view engine", "ejs");
 const viewsFolder = path.join(path.resolve(), "views");
 
+const PORT = process.env.PORT || 8000;
 app.use(express.urlencoded({ extended: true }));
 
 const publicPath = path.join(__dirname, "public");
@@ -27,12 +28,10 @@ const adminRouter = require("./routes/admin.route");
 // const { config } = require("dotenv");
 app.use("/admin", adminRouter);
 
-
 const contactPageRouter = require("./routes/contactMe.route");
-app.use('/ContactMe', contactPageRouter);
-
+app.use("/ContactMe", contactPageRouter);
 
 // server port
-app.listen(process.env.PORT, () => {
-  console.log(`server is running on port ${process.env.PORT}` );
+app.listen(PORT, () => {
+  console.log(`server is running on port ${PORT}`);
 });
