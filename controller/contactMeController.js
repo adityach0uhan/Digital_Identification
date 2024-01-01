@@ -32,7 +32,7 @@ async function sendComplaint() {
   
       const mailOptions = {
         from: `Digital Identification <motivational-quotes1@outlook.com>`,
-        to: "aditya9340164@gmail.com",
+        to: "gyanibaba137@gmail.com",
         subject: "Registration Complete!",
         html: `
             Dear Admin ,
